@@ -1,0 +1,345 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to bottom, #f0f7f0, #e8f0e8);
+}
+
+header {
+    background: linear-gradient(135deg, #1e6b1e, #2e8b2e);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+    transform: translateY(-2px);
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: #ffeb3b;
+    color: #1e6b1e;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.08);
+    background: #fff176;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.trees-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #1e6b1e;
+}
+
+.search-container input {
+    padding: 12px 20px;
+    width: 320px;
+    border: 2px solid #4caf50;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.search-container input:focus {
+    border-color: #1e6b1e;
+    box-shadow: 0 0 0 4px rgba(30, 107, 30, 0.2);
+}
+
+.tree-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tree-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.tree-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(30, 107, 30, 0.25);
+}
+
+.tree-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tree-info {
+    padding: 1.5rem;
+}
+
+.tree-info h3 {
+    color: #1e6b1e;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tree-info p {
+    font-size: 0.95rem;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    max-width: 900px;
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    background: rgba(255,255,255,0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+}
+
+.modal-info {
+    padding: 2rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.modal-info h2 {
+    color: #1e6b1e;
+    margin-bottom: 0.3rem;
+}
+
+#modal-scientific {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.info-section {
+    margin-bottom: 1.8rem;
+}
+
+.info-section h3 {
+    color: #2e8b2e;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid #a5d6a5;
+    padding-bottom: 0.5rem;
+}
+
+.about-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2.5rem;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: #1e6b1e;
+}
+
+footer {
+    background: #1e6b1e;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.tree-info {
+    padding: 1.5rem;
+}
+
+.preview {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 12px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-saiba-mais {
+    background: #2e8b2e;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 8px;
+    transition: all 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    background: #1e6b1e;
+    transform: translateY(-2px);
+}
+
+.tree-card {
+    transition: all 0.4s;
+}
+
+.tree-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(30, 107, 30, 0.3);
+}

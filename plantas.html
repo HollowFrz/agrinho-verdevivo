@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdeVivo | Plantas Ornamentais e Medicinais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>VerdeVivo</h1>
+                <p>Preservando a vida verde</p>
+            </div>
+            <nav>
+                <a href="index.html">Árvores</a>
+                <a href="plantas.html">Plantas</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1018/1920/1080') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Plantas que Transformam</h1>
+            <p>Ornamentais, medicinais e aromáticas para embelezar e cuidar do seu espaço.</p>
+            <a href="#plants" class="btn-primary">Explorar Plantas</a>
+        </div>
+    </section>
+
+    <!-- PLANTAS SECTION -->
+    <section class="trees-section" id="plants">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossas Plantas</h2>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar por nome ou característica...">
+                </div>
+            </div>
+
+            <div class="tree-grid" id="plantGrid">
+                <!-- Cards serão inseridos pelo JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT (mesmo da outra página) -->
+    <section class="about-section">
+        <div class="container about-content">
+            <h2>Sobre o VerdeVivo</h2>
+            <p>Somos uma iniciativa dedicada à preservação e divulgação da flora brasileira.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>85+</h3>
+                    <p>Espécies de plantas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3.200</h3>
+                    <p>Mudas distribuídas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>28</h3>
+                    <p>Espécies medicinais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VerdeVivo - Preservação Ambiental. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- MODAL (mesmo da outra página) -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalScientific"></p>
+                <div class="info-section">
+                    <h3>Descrição</h3>
+                    <p id="modalDescription"></p>
+                </div>
+                <div class="info-section">
+                    <h3>Características</h3>
+                    <p id="modalFeatures"></p>
+                </div>
+                <div class="info-section">
+                    <h3>Curiosidades</h3>
+                    <p id="modalCuriosities"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
